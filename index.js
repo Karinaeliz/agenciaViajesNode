@@ -4,7 +4,7 @@ import db from './config/db.js';
 
 
 
-console.log(process.env.DB_HOST)
+
 
 const app = express();
 
