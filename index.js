@@ -2,10 +2,6 @@ import express from 'express';
 import router from './routes/index.js';
 import sequelize from './config/db.js';
 
-
-
-
-
 const app = express();
 
 // Conectar la base de datos
@@ -15,7 +11,7 @@ sequelize.authenticate()
 
 
 // Definir puerto
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // Habilitar PUG
 app.set('view engine', 'pug');
@@ -40,6 +36,6 @@ app.use(express.static('public'));
 app.use('/', router);
 
 
-app.listen(port, () => {
-    console.log(`El Servidor esta funcionando en el puerto ${port}`)
-})
+app.listen(PORT, () => {
+    console.log(`El Servidor esta funcionando en el puerto ${PORT}`);
+});
